@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal estudo Biblico</title>
+
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .caixa{
+            background-color: rgb(5, 116, 116);
+            position: absolute;
+            margin-top: 100px;
+            margin-left: 250px;
+            height: 100px;
+            width: 150;
+            
+        }
+        .princ{
+            
+            display: none;
+            background-color: rgb(17, 247, 33);
+            
+        }
+        #input{
+            cursor: pointer;
+        }
+        .btn{
+            cursor: pointer;
+        }
+        marquee{
+            background-color: crimson;
+            color: aliceblue;
+        }
+        a{
+            color: black;
+        }
+        
+        
+
+        
+    </style>
+
+</head>
+<body><br>
+
+    <br> 
+    <br>
+    
+    <marquee  behavior="" direction="">Edu.App&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WhatsApp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;81984242796 </marquee>
+    
+    <br>
+    <h1 id="rest"></h1>
+    <div class="caixa">
+        <p>Coloque seu Nome</p>
+          <input id="input" type="text">
+        <button class="btn" onclick="buscar()">Buscar</button>
+    </div>
+    <div class="princ">
+        <table>
+            <th>
+                <td>
+                    <a href="https://eduardobandeira57.github.io/canal_biblico/"> a besta que subiu do Mar Apocalipse 13</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                   <a href="https://eduardobandeira57.github.io/Samaritana/">Os 5 maridos da Samaritana</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td>
+                    <a href="https://eduardobandeira57.github.io/Apocalipse6/">Apocalipse6</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                </td>
+                <td>
+                    <a href="https://eduardobandeira57.github.io/Quiz/"> Quiz biblico</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                </td> 
+                <td>
+                    <a href="">estudo novo</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                </td>
+            </th>
+        </td> 
+   
+    </th>
+        </table>
+    </div>
+    
+ 
+    
+
+    <script>
+        function buscar(){
+            var nome =document.getElementById("input").value
+            if(nome==""){
+               alert("È obrigatotio colocar o nome")
+            }else{
+            
+            document.getElementById("rest").textContent="Bem Vindo! "+"  "+nome
+            const inpu = document.querySelector('#input');
+          input.value = '';
+          document.querySelector(".caixa").style.display="none"
+          document.querySelector(".princ").style.display="block"
+          
+        
+        
+        }
+        
+        }
+        
+    </script>
+</body>
+</html>
