@@ -14,11 +14,7 @@
         }
         .caixa{
             background-color: rgb(5, 116, 116);
-            position: absolute;
-            margin-top: 100px;
-            margin-left: 25px;
-            height: 100px;
-            width: 150;
+           
             
         }
         
@@ -31,6 +27,7 @@
         marquee{
             background-color: crimson;
             color: aliceblue;
+            font-size: 25px;
         }
         a{
             color: black;
@@ -107,8 +104,8 @@
     <marquee  behavior="" direction="">Edu.App&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WhatsApp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;81984242796 </marquee>
     
     <br>
-    <h1 id="rest"></h1>
-    <div class="caixa">
+    <h1 id="rest" align="center"></h1>
+    <div class="caixa" align="center">
         <p>Coloque seu Nome</p>
           <input id="input" type="text">
         <button class="btn" onclick="buscar()">Entrar</button>
@@ -150,6 +147,7 @@
                    </div>
     
     </div>
+    <h2 class="h2"></h2>
     
 
     <script>
@@ -160,7 +158,8 @@
             }else{
             
             document.getElementById("rest").textContent="Bem Vindo! "+"  "+nome
-            const inpu = document.querySelector('#input');
+             document.querySelector(".h2").textContent="(Habacuque 3)"+"  "+"18 Todavia eu me alegrarei no Senhor; exultarei no Deus da minha salvação."
+                const inpu = document.querySelector('#input');
           input.value = '';
           document.querySelector(".caixa").style.display="none"
           document.querySelector(".menu").style.display="block"
