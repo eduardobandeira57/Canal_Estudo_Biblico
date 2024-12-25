@@ -247,7 +247,7 @@
     font-size: 25px;
 }
 .iframe{
-   position: absolute;
+   position: relative;
     height: 100%;
     width: 100%;
     margin-top: -10px;
@@ -423,6 +423,7 @@
             if(nome==""){
                alert("È obrigatotio colocar o nome")
             }else{
+                document.querySelector(".iframe").style.position="absolute"
                 document.querySelector(".iframe").src="74US.gif"
                 document.querySelector(".h4").textContent="Esculte 7 hinos e receba á Palavra"
                 document.getElementById("rest").style.backgroundImage = 'url("https://dhamaka-music.com/BZ/img/names-min111.gif")'
@@ -435,8 +436,11 @@
           setInterval(() => {
             document.querySelector(".iframe").src=""
             document.getElementById("rest").style.backgroundImage = 'url(...)'
-            
-            
+            document.querySelector(".iframe").style.position="relative"
+            document.querySelector(".iframe").style.display="none"
+
+
+
           }, 10000);
           
           
