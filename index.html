@@ -263,7 +263,7 @@
 </head>
 <body>
     <audio src=""></audio>
-    <div  align=center style="color: white;">Visualizações&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://contador.s12.com.br/img-368577cYC3ddWD5C-17.gif' border='0' alt='contador'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=368577cYC3ddWD5C'></script></div>
+   <div  align=center style="color: white;">Visualizações&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://contador.s12.com.br/img-368577cYC3ddWD5C-17.gif' border='0' alt='contador'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=368577cYC3ddWD5C'></script></div>
 
     <br> 
     <br>
@@ -413,6 +413,7 @@
         var data="Devorcional 25/12/2024"
 
         devoc=0
+        
 
 
 
@@ -431,6 +432,12 @@
           input.value = '';
           document.querySelector(".caixa").style.display="none"
           document.querySelector(".menu").style.display="block"
+          setInterval(() => {
+            document.querySelector(".iframe").src=""
+            document.getElementById("rest").style.backgroundImage = 'url(...)'
+            
+            
+          }, 10000);
           
           
         
@@ -946,11 +953,7 @@
 
          })
 
-         setInterval(() => {
-            document.querySelector(".iframe").src=""
-            document.getElementById("rest").style.backgroundImage = 'url(...)'
-            
-         }, 20000);
+        
 
 
 
