@@ -9,14 +9,10 @@
 
     <style>
         body{
-            background-color: aquamarine;
+            background-color: rgb(5, 13, 120);
+            background-image: url("https://dhamaka-music.com/BZ/img/2022.gif");
         }
-        .caixa{
-            background-color: rgb(5, 116, 116);
-            
-            
-            
-        } 
+         
         
         #input{
             cursor: pointer;
@@ -51,22 +47,25 @@
         }
         .pmenu1{
             cursor: pointer;
+            color: aliceblue;
         }
         .pmenu1:hover{
-            color: blue;
+            color: rgb(255, 0, 0);
         }
         .pmenu2{
             cursor: pointer;
+            color: aliceblue;
         }
         .pmenu2:hover{
-            color: blue;
+            color: rgb(255, 0, 0);
         }
        
         .pmenu4{
             cursor: pointer;
+            color: aliceblue;
         }
-        .pmenu4.princ{
-            color: blue;
+        .pmenu4:hover{
+            color: rgb(255, 0, 0);
         }
        
         .princ1{
@@ -244,7 +243,15 @@
     display: none;
 }
 .h4{
+    
     font-size: 25px;
+}
+.iframe{
+   position: absolute;
+    height: 100%;
+    width: 100%;
+    margin-top: -10px;
+    margin-left: 150px;
 }
 
        
@@ -256,20 +263,23 @@
 </head>
 <body>
     <audio src=""></audio>
-    <div  align=center>Visualizações&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://contador.s12.com.br/img-368577cYC3ddWD5C-17.gif' border='0' alt='contador'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=368577cYC3ddWD5C'></script></div>
+    <div  align=center style="color: white;">Visualizações&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://contador.s12.com.br/img-368577cYC3ddWD5C-17.gif' border='0' alt='contador'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=368577cYC3ddWD5C'></script></div>
 
     <br> 
     <br>
     
-    <marquee  behavior="" direction="">Edu.App&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WhatsApp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;81984242796 </marquee>
+    <marquee class="marq" behavior="" direction=""></marquee>
+   
     
-    <br>
-    <h1 id="rest" align="center"></h1>
+    <h1 id="rest" align="center" style="color: white;"></h1>
+    
+    
     <div class="caixa"align=center>
-        <p>Coloque seu Nome</p>
+        <p style="color: white;">Coloque seu Nome</p>
           <input id="input" type="text">
         <button class="btn" onclick="buscar()">Entrar</button>
     </div>
+     <iframe class="iframe" src="" frameborder="0"></iframe>
     <div class="menu" >
         <table class="tab">
             <tr>
@@ -342,11 +352,11 @@
     </div>
 
 
-     <h4 class="h4" align="center"></h4>
+     <h4 class="h4" align="center" style="color: white;"></h4>
 
     <h2 class="cont"></h2>
     <div class="leitura">
-                     <h3>1 Tessalonicenses 4</h3>
+        <h3>1 Tessalonicenses 4</h3>
         <br>
         <p>1 Finalmente, irmãos, vos rogamos e exortamos no Senhor Jesus, que assim como recebestes de nós, de que maneira convém andar e agradar a Deus, assim andai, para que possais progredir cada vez mais. </p>
         <p>2 Porque vós bem sabeis que mandamentos vos temos dado pelo Senhor Jesus. </p>
@@ -408,12 +418,15 @@
 
         function buscar(){
             var nome =document.getElementById("input").value
+           
             if(nome==""){
                alert("È obrigatotio colocar o nome")
             }else{
+                document.querySelector(".iframe").src="74EUA.gif"
                 document.querySelector(".h4").textContent="Esculte 7 hinos e receba á Palavra"
-            document.getElementById("rest").textContent="Bem Vindo! "+"  "+nome
-            
+                document.getElementById("rest").style.backgroundImage = 'url("https://dhamaka-music.com/BZ/img/names-min111.gif")'
+                document.getElementById("rest").textContent="Bem Vindo! "+"  "+nome
+             document.querySelector(".marq").textContent="Edu.App    WhatasApp   81984242796"
             const inpu = document.querySelector('#input');
           input.value = '';
           document.querySelector(".caixa").style.display="none"
@@ -932,6 +945,12 @@
 
 
          })
+
+         setInterval(() => {
+            document.querySelector(".iframe").src=""
+            document.getElementById("rest").style.backgroundImage = 'url(...)'
+            
+         }, 20000);
 
 
 
