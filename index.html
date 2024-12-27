@@ -16,9 +16,15 @@
         
         #input{
             cursor: pointer;
+            font-size: 20px;
+            color: black;
         }
         .btn{
+            font-size: 25px;
             cursor: pointer;
+            color: black;
+            padding: 5px;
+            border-radius: 15px;
         }
         marquee{
             background-color: crimson;
@@ -245,6 +251,7 @@
 .h4{
     
     font-size: 25px;
+    color: aliceblue;
 }
 .iframe{
    position: relative;
@@ -253,6 +260,62 @@
     margin-top: -10px;
     margin-left: 150px;
 }
+.visu{
+    display: none;
+}
+#rest{
+    width: fit-content;
+    margin-left: 250px;
+}
+section{
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 50vh;
+    min-height: 50vh;
+    margin: 50px;
+}
+.caixa{
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100px);
+    transition: all 1s;
+    background-color: aqua;
+    padding: 5px;
+    border-radius: 15px;
+
+
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+}
+.pcaixa{
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    margin-left: 10px;
+}
+
+@media(max-width: 450px){
+    #rest{
+        margin-left: 100px;
+    }
+    .btn{
+        margin-top: 15px;
+    }
+    .iframe{
+        margin-left: 50px;
+    }
+
+
+
+
+
+}
+
 
        
         
@@ -263,7 +326,7 @@
 </head>
 <body>
     <audio src=""></audio>
-   <div  align=center style="color: white;">Visualizações&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://contador.s12.com.br/img-368577cYC3ddWD5C-17.gif' border='0' alt='contador'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=368577cYC3ddWD5C'></script></div>
+   <div class="visu"  align=center style="color: white;">Visualizações&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://contador.s12.com.br/img-368577cYC3ddWD5C-17.gif' border='0' alt='contador'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=368577cYC3ddWD5C'></script></div>
 
     <br> 
     <br>
@@ -271,14 +334,18 @@
     <marquee class="marq" behavior="" direction=""></marquee>
    
     
-    <h1 id="rest" align="center" style="color: white;"></h1>
+    <h1 id="rest"  style="color: white;"></h1>
     
-    
-    <div class="caixa"align=center>
-        <p style="color: white;">Coloque seu Nome</p>
+    <section class="caixa">
+     <div >
+        <p class="pcaixa" style="color: black;">Coloque seu Nome</p>
           <input id="input" type="text">
         <button class="btn" onclick="buscar()">Entrar</button>
-    </div>
+     </div>
+    </section>
+
+
+
      <iframe class="iframe" src="" frameborder="0"></iframe>
     <div class="menu" >
         <table class="tab">
@@ -375,60 +442,40 @@
 
 
          <br>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
     
 
+   
+</body>
     <script>
         var data="Devorcional 27/12/2024"
 
         devoc=0
         
+        const myObserve =new IntersectionObserver((entryes) =>{
 
+            entryes.forEach((entry) =>{
+                if(entry.isIntersecting){
+                    entry.target.classList.add("show")
+
+                }else{
+                    entry.target.classList.remove("caixa")
+
+
+                }
+
+
+
+
+            })
+
+
+
+
+        })
+        const elementos  = document.querySelectorAll(".caixa")
+        elementos.forEach((element) => myObserve.observe(element))
 
 
         function buscar(){
@@ -445,8 +492,10 @@
              document.querySelector(".marq").textContent="Edu.App    WhatasApp   81984242796"
             const inpu = document.querySelector('#input');
           input.value = '';
+          document.querySelector(".visu").style.display="block"
           document.querySelector(".caixa").style.display="none"
           document.querySelector(".menu").style.display="block"
+
           setInterval(() => {
             document.querySelector(".iframe").src=""
             document.getElementById("rest").style.backgroundImage = 'url(...)'
@@ -979,5 +1028,4 @@
 
         
     </script>
-</body>
 </html>
