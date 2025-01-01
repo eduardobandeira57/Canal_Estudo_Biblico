@@ -10,24 +10,40 @@
     <style>
         body{
             background-color: black;
-            background-image: url("https://dhamaka-music.com/BZ/img/2022.gif");
+            background-image: url("starfall-gif-20.gif");
         }
-         
+
+        .caixa{
+            opacity: 0;
+            filter: blur(15px);
+            transform: translateX(-100px);
+            transition: all 2s;
+            background-color: aqua;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 150px;
+            margin-left: 25%;
+            width: 50%;
+            height: 50%;
+            
+
+
+        }
         
         #input{
             cursor: pointer;
             font-size: 20px;
-            color: black;
+            border-radius: 10px;
         }
         .btn{
-            font-size: 25px;
             cursor: pointer;
-            color: black;
-            padding: 5px;
+            font-size: 25px;
+            margin-top: 10px;
             border-radius: 15px;
+            padding: 5px;
         }
         marquee{
-            background-color: crimson;
+            
             color: aliceblue;
             font-size: 25px;
         }
@@ -38,15 +54,36 @@
         a:hover{
             color: blue;
         }
+       
+        .rest{
+            opacity: 0;
+            filter: blur(15px);
+            transform: translateX(-100px);
+            transition: all 5s;
+             width: fit-content;
+             margin-left: 25%;
+             color: aliceblue;
+        }
+
         .menu{
-            display: none;
-            background-color: darkcyan;
+            opacity: 0;
+            filter: blur(15px);
+            transform: translateX(-100px);
+            transition: all 5s;
+            background-color: rgba(6, 239, 239, 0.869);
+            margin-left: 80px;
+            font-size: 25px;
             
         }
         .princ{
-            display: none;
+            opacity: 0;
+            filter: blur(15px);
+            transform: translateX(-100px);
+            transition: all 2s;
             background-color: rgb(17, 247, 33);
             width: fit-content;
+            border-radius: 15px;
+            padding: 15px;
         }
         .princ:hover{
             color: rgb(27, 12, 242);
@@ -75,31 +112,52 @@
         }
        
         .princ1{
-            position: absolute;
-            display: none;
+            cursor: pointer;
+            opacity: 0;
+            filter: blur(15px);
+            transform: translateX(-100px);
+            transition: all 2s;
             background-color: rgb(17, 247, 33);
             width: fit-content;
-            margin-left: 80px;
+            margin-left: 190px;
+            border-radius: 15px;
+            margin-top: -190px;
+            padding: 15px;
         }
         .princ1:hover{
             color: blue;
         }
         .princ2{
-            display: none;
+            cursor: pointer;
+            opacity: 0;
+            filter: blur(15px);
+            transform: translateX(-100px);
+            transition: all 2s;
             background-color: rgb(17, 247, 33);
             width: fit-content;
             margin-left: 200px;
+            padding: 15px;
+            box-sizing: 15px;
             
         }
         .princ2:hover{
             color: blue;
         }
         .harpa{
+            cursor: pointer;
             background-color: rgb(17, 247, 33);
-            display: none;
-            margin-left: 200px;
+            opacity: 0;
+            filter: blur(15px);
+            transform: translateX(-100px);
+            transition: all 2s;
+            margin-left: 350px;
             width: fit-content;
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: -100px;
+
         }
+        
 
 .l1{
     cursor: pointer;
@@ -251,7 +309,6 @@
 .h4{
     
     font-size: 25px;
-    color: aliceblue;
 }
 .iframe{
    position: relative;
@@ -260,65 +317,30 @@
     margin-top: -10px;
     margin-left: 150px;
 }
-.visu{
-    display: none;
-}
-#rest{
-    width: fit-content;
-    margin-left: 250px;
-}
-section{
-    display: grid;
-    place-items: center;
-    align-items: center;
-    min-height: 50vh;
-    min-height: 50vh;
-    margin: 50px;
-}
-.caixa{
-    opacity: 0;
-    filter: blur(15px);
-    transform: translateX(-100px);
-    transition: all 1s;
-    background-color: aqua;
-    padding: 5px;
-    border-radius: 15px;
-
-
-}
 .show{
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
+    transform: translateX();
     transition: all 1s;
-}
-.pcaixa{
-    font-size: 25px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: black;
-    margin-left: 10px;
-}
-
-@media(max-width: 450px){
-    #rest{
-        margin-left: 100px;
-    }
-    .btn{
-        margin-top: 15px;
-    }
-    .iframe{
-        margin-left: 50px;
-    }
-
-
-
-
-
 }
 
 
        
-        
+    @media(max-width: 450px){
+        #input{
+            font-size: 15px;
+        }
+        .menu{
+            font-size: 15px;
+        }
+    
+    
+    
+    
+    
+    
+    
+    }    
 
         
     </style>
@@ -326,7 +348,7 @@ section{
 </head>
 <body>
     <audio src=""></audio>
-   <div class="visu"  align=center style="color: white;">Visualizações&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://contador.s12.com.br/img-368577cYC3ddWD5C-17.gif' border='0' alt='contador'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=368577cYC3ddWD5C'></script></div>
+   <div  align=center style="color: white;">Visualizações&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://contador.s12.com.br/img-368577cYC3ddWD5C-17.gif' border='0' alt='contador'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=368577cYC3ddWD5C'></script></div>
 
     <br> 
     <br>
@@ -334,30 +356,27 @@ section{
     <marquee class="marq" behavior="" direction=""></marquee>
    
     
-    <h1 id="rest"  style="color: white;"></h1>
+    <h1 class="rest" ></h1>
+    
     
     <section class="caixa">
-     <div >
-        <p class="pcaixa" style="color: black;">Coloque seu Nome</p>
+        <p style="color: rgb(1, 0, 11); font-size: 25px;padding: 5px;">Coloque seu Nome</p>
           <input id="input" type="text">
         <button class="btn" onclick="buscar()">Entrar</button>
-     </div>
     </section>
-
-
 
      <iframe class="iframe" src="" frameborder="0"></iframe>
     <div class="menu" >
         <table class="tab">
             <tr>
-                <td>
+                <td>&nbsp;&nbsp;&nbsp;
                   <a class="pmenu1">Estudos<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
                     <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
                     </svg></a>&nbsp; 
                 </td>
                 <td>
-                  <a class="pmenu2">Quiz biblico</a>&nbsp;  
+                  <a class="pmenu2">Quiz biblico</a>&nbsp;&nbsp;  
                 </td>
                 
                 <td>
@@ -374,9 +393,8 @@ section{
           <a href="https://eduardobandeira57.github.io/canal_biblico/"> a besta que subiu do Mar Apocalipse 13</a><br><br>
             <a href="https://eduardobandeira57.github.io/Samaritana/">Os 5 maridos da Samaritana</a> <br><br>
               <a href="https://eduardobandeira57.github.io/Apocalipse6/">Apocalipse6</a><br><br>
-           <a href="https://eduardobandeira57.github.io/carta-igreja-Efesios/">1°carta a igreja Efesios</a><br><br>
-           <a href="https://eduardobandeira57.github.io/2-carta-Igreja-Esmirna/">2° carta Igreja Esmirna</a><br><br>
-            <a href="https://eduardobandeira57.github.io/3-Igreja-Pergamo/">3° carta Igreja Pérgamo</a><br><br>
+           <a href="https://eduardobandeira57.github.io/carta-igreja-Efesios/">carta-igreja-Efesios</a><br><br>
+           <a href="https://eduardobandeira57.github.io/2-carta-Igreja-Esmirna/">2° carta-Igreja-Esmirna</a><br><br>
                  
                     
                 
@@ -424,16 +442,7 @@ section{
 
     <h2 class="cont"></h2>
     <div class="leitura">
-        
-
-      
-
-     
-           
-
-      
-
-      <h3 style="color: white;">Filipenses 4</h3>
+        <h3 style="color: white;">Filipenses 4</h3>
         <br>
         <p style="color: white;">1 Portanto, meus amados e mui queridos irmãos, minha alegria e coroa, estai assim firmes no Senhor, amados. </p>
         <p style="color: white;">2 Rogo a Evódia, e rogo a Síntique, que sintam o mesmo no Senhor. </p>
@@ -461,62 +470,43 @@ section{
        <br>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
     
 
-   
+  
 </body>
-    <script>
-        var data="Devorcional 1/11/2025"
 
-        devoc=0
+<script>
         
-        const myObserve =new IntersectionObserver((entryes) =>{
 
-            entryes.forEach((entry) =>{
-                if(entry.isIntersecting){
-                    entry.target.classList.add("show")
+        const myObserver = new IntersectionObserver((entryes) =>{
 
-                }else{
-                    entry.target.classList.remove("caixa")
+           entryes.forEach((entry) =>{
 
+            if(entry.isIntersecting){
+               entry.target.classList.add("show")
 
-                }
+            }else{
+               entry.target.classList.remove("caixa")
 
-
-
-
-            })
-
+            }
 
 
 
         })
-        const elementos  = document.querySelectorAll(".caixa")
-        elementos.forEach((element) => myObserve.observe(element))
+
+
+
+
+});
+
+const elements=document.querySelectorAll(".caixa")
+elements.forEach((element) => myObserver.observe(element))
+
+        devoc=0
+        var data="Devorcional 1/1/2025"
+
 
 
         function buscar(){
@@ -528,18 +518,19 @@ section{
                 document.querySelector(".iframe").style.position="absolute"
                 document.querySelector(".iframe").src="74US.gif"
                 document.querySelector(".h4").textContent="Esculte 7 hinos e receba á Palavra"
-                document.getElementById("rest").style.backgroundImage = 'url("https://dhamaka-music.com/BZ/img/names-min111.gif")'
-                document.getElementById("rest").textContent="Feliz 2025  "+"  "+nome+"   " + "E sua familia"
+                document.querySelector(".rest").style.backgroundImage = 'url("https://dhamaka-music.com/BZ/img/names-min111.gif")'
+                document.querySelector(".rest").textContent="Bem Vindo! "+"  "+nome
              document.querySelector(".marq").textContent="Edu.App    WhatasApp   81984242796"
             const inpu = document.querySelector('#input');
           input.value = '';
-          document.querySelector(".visu").style.display="block"
           document.querySelector(".caixa").style.display="none"
-          document.querySelector(".menu").style.display="block"
+          document.querySelector(".menu").classList.add("show")
+          document.querySelector(".rest").classList.add("show")
+
 
           setInterval(() => {
             document.querySelector(".iframe").src=""
-            document.getElementById("rest").style.backgroundImage = 'url(...)'
+            document.querySelector(".rest").style.backgroundImage = 'url(...)'
             document.querySelector(".iframe").style.position="relative"
             document.querySelector(".iframe").style.display="none"
 
@@ -556,31 +547,29 @@ section{
         let div1=document.querySelector(".pmenu1");
         let fechardiv1=document.querySelector(".princ");
         div1.addEventListener("mouseover",function(){
-            document.querySelector(".princ").style.display="block"
-            document.querySelector(".princ1").style.display="none"
-            document.querySelector(".harpa").style.display="none"
+            document.querySelector(".princ").classList.add("show")
+            document.querySelector(".princ1").classList.remove("show")
+            document.querySelector(".harpa").classList.remove(show)
         });
         
         fechardiv1.addEventListener("mouseleave",function(){
-            document.querySelector(".princ").style.display="none"
-            document.querySelector(".princ1").style.display="none"
-            document.querySelector(".harpa").style.display="none"
+            
+            document.querySelector(".princ").classList.remove("show")
 
         });
 
         let div2=document.querySelector(".pmenu2");
         let fechardiv2=document.querySelector(".princ1");
         div2.addEventListener("mouseover",function(){
-            document.querySelector(".princ1").style.display="block"
-            document.querySelector(".princ").style.display="none"
-            document.querySelector(".harpa").style.display="none"
+            document.querySelector(".princ1").classList.add("show")
+            document.querySelector(".princ").classList.remove("show")
+            document.querySelector(".harpa").classList.remove("show")
 
         })
         
         fechardiv2.addEventListener("mouseleave",function(){
-            document.querySelector(".princ1").style.display="none"
-            document.querySelector(".princ").style.display="none"
-            document.querySelector(".harpa").style.display="none"
+            document.querySelector(".princ1").classList.remove("show")
+            
 
         });
 
@@ -588,17 +577,16 @@ section{
         let div4=document.querySelector(".pmenu4");
         let fechardiv4=document.querySelector(".harpa");
         div4.addEventListener("mouseover",function(){
-            document.querySelector(".princ1").style.display="none"
-            document.querySelector(".princ").style.display="none"
-            document.querySelector(".harpa").style.display="block"
+            document.querySelector(".princ1").classList.remove("show")
+            document.querySelector(".princ").classList.remove("show")
+            document.querySelector(".harpa").classList.add("show")
            
 
         })
         
         fechardiv4.addEventListener("mouseleave",function(){
-            document.querySelector(".princ1").style.display="none"
-            document.querySelector(".princ").style.display="none"
-            document.querySelector(".harpa").style.display="none"
+            
+            document.querySelector(".harpa").classList.remove("show")
 
         });
 
@@ -1068,5 +1056,7 @@ section{
 
 
         
-    </script>
+</script>
+
+
 </html>
